@@ -1,0 +1,13 @@
+{
+  // LaTeX
+  "latex-workshop.formatting.latex": "tex-fmt",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+
+  // BibTeX
+  "latex-workshop.bibtex-format.sort.enabled": true,
+
+  // code-spell-checker
+  "cSpell.diagnosticLevel": "Hint",
+  "cSpell.ignorePaths": [".vscode"],
+  "cSpell.words": []
+}
