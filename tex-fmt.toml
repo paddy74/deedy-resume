@@ -1,0 +1,4 @@
+# tex-fmt.toml
+wraplen = 120
+tabsize = 2
+tabchar = "space"

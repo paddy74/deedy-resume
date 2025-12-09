@@ -17,8 +17,8 @@
 
 \RequirePackage{iftex}
 \ifPDFTeX
-  \ClassError{main}{This class requires XeLaTeX or LuaLaTeX}%
-    {Use xelatex or lualatex. The class loads fontspec and OpenType fonts.}
+\ClassError{main}{This class requires XeLaTeX or LuaLaTeX}%
+{Use xelatex or lualatex. The class loads fontspec and OpenType fonts.}
 \fi
 
 % Package imports
@@ -67,7 +67,7 @@
   Path      = fonts/raleway/
 ]{Raleway-ExtraLight}
 
-% Absolute blocks (date, work location)
+% Absolute blocks (date)
 % =====================================
 
 \RequirePackage[absolute]{textpos}
@@ -76,11 +76,12 @@
 \setlength{\TPVertModule}{1mm}
 
 % Document last updated on
-% ========================
 \newcommand{\lastupdated}{%
   \begin{textblock}{60}(155,5)%
-  \color{date}\fontspec[Path = fonts/raleway/]{Raleway-ExtraLight}\fontsize{8pt}{10pt}\selectfont%
-  Last Updated on \today
+    \color{date}
+    \fontspec[Path = fonts/raleway/]{Raleway-ExtraLight}
+    \fontsize{8pt}{10pt}
+    \selectfont Last Updated on \today
   \end{textblock}%
 }
 
@@ -90,11 +91,14 @@
 \newcommand{\namesection}[2]{%
   \centering{%
     \fontsize{40pt}{60pt}%
-    \fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #1%
+    \fontspec[Path = fonts/lato/]{Lato-Lig}
+    \selectfont #1%
   }\\[5pt]%
   \centering{%
     \color{headings}%
-    \fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #2
+    \fontspec[Path = fonts/raleway/]{Raleway-Medium}
+    \fontsize{11pt}{14pt}
+    \selectfont #2
   }%
   \noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}}%
   \vspace{-15pt}
@@ -113,21 +117,26 @@
 
 \titleformat{\section}{
   \color{headings}%
-  \scshape\fontspec[Path = fonts/lato/]{Lato-Reg}\fontsize{16pt}{24pt}\selectfont \raggedright\MakeUppercase
+  \scshape\fontspec[Path = fonts/lato/]{Lato-Reg}
+  \fontsize{16pt}{24pt}
+  \selectfont\raggedright\MakeUppercase
 }{}{0em}{}
-
 
 % Subheadings command
 % -------------------
 
 \titleformat{\subsection}{%
   \color{subheadings}
-  \fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\MakeUppercase
+  \fontspec[Path = fonts/lato/]{Lato-Bol}
+  \fontsize{12pt}{12pt}
+  \selectfont\bfseries\MakeUppercase
 }{}{0em}{}
 
 \newcommand{\runsubsection}[1]{%
   \color{subheadings}
-  \fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\MakeUppercase{#1}\normalfont
+  \fontspec[Path = fonts/lato/]{Lato-Bol}
+  \fontsize{12pt}{12pt}
+  \selectfont\bfseries\MakeUppercase{#1}\normalfont
 }
 
 % Descriptors / location
@@ -142,13 +151,16 @@
 
 \newcommand{\location}[1]{%
   \color{subheadings}
-  \raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1\\}\normalfont
+  \raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}
+  \fontsize{10pt}{12pt}
+  \selectfont {#1\\}\normalfont
 }
-
 
 % Bullet lists with fewer gaps
 % ============================
 \newenvironment{tightemize}{%
-  \vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
-}%
-{\end{itemize}\vspace{-\topsep}}
+  \vspace{-\topsep}
+\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt
+    }%
+    {
+\end{itemize}\vspace{-\topsep}}
