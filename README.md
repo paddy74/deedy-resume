@@ -33,6 +33,7 @@ Compiles only with **XeTeX** and required **BibTex** for compiling publications 
 
 - **LaTeX Distribution**: [TeX Live](https://www.tug.org/texlive/)
 - **Formatter**: [tex-fmt](https://github.com/WGUNDERWOOD/tex-fmt)
+- **Pre-Commit Hooks**: [prek](https://prek.j178.dev/)
 
 ```bash
 sudo apt install texlive
